@@ -1,0 +1,52 @@
+# Ignore Visual Studio files
+.vscode/
+*.suo
+*.user
+*.sln.docstates
+
+# Ignore NuGet packages
+/packages/
+
+# Ignore build output
+/bin/
+/obj/
+/*.exe
+/*.dll
+/*.pdb
+/*.dll.config
+/*.exe.config
+/*.log
+/*.vspscc
+/*.vssscc
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*Backup*
+*.[Pp]ublish.xml
+*.deploy
+*.pubxml
+*.publishproj
+
+# Ignore Resharper files
+_ReSharper*/
+*.sln.idea
+
+# Ignore Rider files
+.idea/
+
+# Ignore user-specific files
+*.userprefs
