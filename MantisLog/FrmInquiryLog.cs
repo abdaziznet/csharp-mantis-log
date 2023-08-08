@@ -186,45 +186,55 @@ namespace MantisLog
 			Log.Information("Start extract log to list.");
 
 			string[] dirFiles = Directory.GetFiles(selectedPath, "*.LOG", SearchOption.AllDirectories);
-			foreach (string filePath in dirFiles)
+			if (dirFiles.Count() > 0)
 			{
-				using (StreamReader reader = new StreamReader(filePath))
+				foreach (string filePath in dirFiles)
 				{
-					string logName = Path.GetFileName(filePath);
-					string line;
-					while ((line = reader.ReadLine()) != null)
+					using (StreamReader reader = new StreamReader(filePath))
 					{
-						try
+						string logName = Path.GetFileName(filePath);
+						string line;
+						while ((line = reader.ReadLine()) != null)
 						{
-							string[] arrLine = line.Split('|');
-							if (arrLine.Length > 0)
+							try
 							{
-								LogFiles logFiles = new LogFiles();
-								logFiles.LogName = logName;
-								logFiles.Date = arrLine[0].Split(' ')[0];
-								logFiles.Time = arrLine[0].Split(' ')[1];
-								logFiles.GuidThreadId = string.Format("{0}-{1}", arrLine[1], arrLine[2]);
-								logFiles.AppName = arrLine[3];
-								logFiles.AppVersion = arrLine[4];
-								logFiles.Info = arrLine[5];
-								logFiles.Message = arrLine[6];
-								listLogFile.Add(logFiles);
+								string[] arrLine = line.Split('|');
+								if (arrLine.Length > 0)
+								{
+									LogFiles logFiles = new LogFiles();
+									logFiles.LogName = logName;
+									logFiles.Date = arrLine[0].Split(' ')[0];
+									logFiles.Time = arrLine[0].Split(' ')[1];
+									logFiles.GuidThreadId = string.Format("{0}-{1}", arrLine[1], arrLine[2]);
+									logFiles.AppName = arrLine[3];
+									logFiles.AppVersion = arrLine[4];
+									logFiles.Info = arrLine[5];
+									logFiles.Message = arrLine[6];
+									listLogFile.Add(logFiles);
+								}
 							}
-						}
-						catch (Exception ex)
-						{
-							if (ex.Message.Contains("Index was outside the bounds of the array."))
+							catch (Exception ex)
 							{
-								continue;
-							}
-							else
-							{
-								Log.Error(ex.Message);
+								if (ex.Message.Contains("Index was outside the bounds of the array."))
+								{
+									continue;
+								}
+								else
+								{
+									Log.Error(ex.Message);
+								}
 							}
 						}
 					}
 				}
 			}
+			else
+			{
+				MessageBox.Show("Log files not found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				Log.Warning("Log files not found.");
+				Cursor = Cursors.Arrow;
+				return;
+			}			
 
 			updateDataGridView();
 			updateDateTimePicker();
@@ -262,6 +272,8 @@ namespace MantisLog
 				{
 					MessageBox.Show("Current page cannot be greater than Total page", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					Log.Warning("Current page cannot be greater than Total page.");
+					Cursor = Cursors.Arrow;
+
 					return;
 				}
 
@@ -292,7 +304,7 @@ namespace MantisLog
 				// Update the navigation buttons' enabled/disabled status based on the current page index
 				btnPrev.Enabled = false;
 				btnNext.Enabled = false;
-				txtCurrentPage.Text = "1";
+				txtCurrentPage.Text = "1"; 
 
 				MessageBox.Show("Data not found", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				Log.Information("Data not found.");
