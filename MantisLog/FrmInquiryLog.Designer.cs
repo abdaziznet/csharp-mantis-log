@@ -174,9 +174,9 @@
 			this.materialLabel1.Location = new System.Drawing.Point(40, 162);
 			this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
 			this.materialLabel1.Name = "materialLabel1";
-			this.materialLabel1.Size = new System.Drawing.Size(54, 19);
+			this.materialLabel1.Size = new System.Drawing.Size(46, 19);
 			this.materialLabel1.TabIndex = 19;
-			this.materialLabel1.Text = "Periode";
+			this.materialLabel1.Text = "Period";
 			// 
 			// materialLabel2
 			// 
@@ -209,7 +209,7 @@
 			this.btnPrev.Depth = 0;
 			this.btnPrev.HighEmphasis = true;
 			this.btnPrev.Icon = null;
-			this.btnPrev.Location = new System.Drawing.Point(1361, 896);
+			this.btnPrev.Location = new System.Drawing.Point(1349, 896);
 			this.btnPrev.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
 			this.btnPrev.MouseState = MaterialSkin.MouseState.HOVER;
 			this.btnPrev.Name = "btnPrev";
@@ -247,7 +247,7 @@
 			this.lblTotalPage.AutoSize = true;
 			this.lblTotalPage.Depth = 0;
 			this.lblTotalPage.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.lblTotalPage.Location = new System.Drawing.Point(1567, 905);
+			this.lblTotalPage.Location = new System.Drawing.Point(1558, 905);
 			this.lblTotalPage.MouseState = MaterialSkin.MouseState.HOVER;
 			this.lblTotalPage.Name = "lblTotalPage";
 			this.lblTotalPage.Size = new System.Drawing.Size(10, 19);
@@ -269,7 +269,8 @@
 			// txtCurrentPage
 			// 
 			this.txtCurrentPage.Font = new System.Drawing.Font("Roboto Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCurrentPage.Location = new System.Drawing.Point(1460, 902);
+			this.txtCurrentPage.Location = new System.Drawing.Point(1448, 902);
+			this.txtCurrentPage.MaxLength = 4;
 			this.txtCurrentPage.Name = "txtCurrentPage";
 			this.txtCurrentPage.Size = new System.Drawing.Size(62, 35);
 			this.txtCurrentPage.TabIndex = 26;
@@ -281,7 +282,7 @@
 			this.of.AutoSize = true;
 			this.of.Depth = 0;
 			this.of.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.of.Location = new System.Drawing.Point(1535, 905);
+			this.of.Location = new System.Drawing.Point(1523, 905);
 			this.of.MouseState = MaterialSkin.MouseState.HOVER;
 			this.of.Name = "of";
 			this.of.Size = new System.Drawing.Size(16, 19);

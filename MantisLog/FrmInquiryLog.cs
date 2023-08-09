@@ -7,24 +7,36 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using Serilog;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Configuration;
+using System.Diagnostics;
 
 namespace MantisLog
 {
 	public partial class FrmInquiryLog : MaterialForm
 	{
-		private List<LogFiles> listLogFile = new List<LogFiles>();
-		private int pageSize = 20; // Number of items per page
+		private List<LogFiles> listLogFile = null;
+		private int pageSize = 0; // Number of items per page
 		private int currentPageIndex = 1; // Current page index
-		private List<LogFiles> pagedData = new List<LogFiles>();
-		private List<LogFiles> tempData = new List<LogFiles>();
+		private List<LogFiles> pagedData = null;
+		private List<LogFiles> tempData = null;
 
+		private int getPageSize
+		{
+			get
+			{
+				if (pageSize == 0)
+				{
+					pageSize = Convert.ToInt16(ConfigurationManager.AppSettings["PageSize"]);
+				}
+				return pageSize;
+			}
+		}
 
 		public FrmInquiryLog()
 		{
 			InitializeComponent();
 
-			Log.Information("MainForm initialized.");
+			Log.Information("Mantislog initialized.");
 
 			var materialSkinManager = MaterialSkinManager.Instance;
 			materialSkinManager.AddFormToManage(this);
@@ -37,9 +49,6 @@ namespace MantisLog
 
 		private void updateDateTimePicker()
 		{
-			dtStart.DataBindings.Clear();
-			dtEnd.DataBindings.Clear();
-
 			string minDate = listLogFile.Select(log => log.Date).Distinct().First();
 
 			dtStart.Value = castDateTime(minDate);
@@ -54,8 +63,6 @@ namespace MantisLog
 
 		private void updateComboBoxInfo()
 		{
-			cmboxInfo.Items.Clear();
-
 			cmboxInfo.DataSource = listLogFile.Select(log => log.Info).Distinct().ToList();
 			cmboxInfo.DisplayMember = "Info";
 		}
@@ -66,8 +73,8 @@ namespace MantisLog
 			dataGridView.Rows.Clear();
 
 			// Calculate the start index and end index of the current page
-			int startIndex = (currentPageIndex - 1) * pageSize;
-			int endIndex = Math.Min(startIndex + pageSize - 1, listLogFile.Count - 1);
+			int startIndex = (currentPageIndex - 1) * getPageSize;
+			int endIndex = Math.Min(startIndex + getPageSize - 1, listLogFile.Count - 1);
 
 			// Create a sublist containing the data for the current page
 			pagedData = listLogFile.GetRange(startIndex, endIndex - startIndex + 1);
@@ -123,7 +130,7 @@ namespace MantisLog
 				Name = "AppName",
 				HeaderText = "App Name",
 				AutoSizeMode = DataGridViewAutoSizeColumnMode.None,
-				Width= 120
+				Width = 120
 			}); // Auto-sized text column
 
 			dataGridView.Columns.Add(new DataGridViewTextBoxColumn()
@@ -144,7 +151,7 @@ namespace MantisLog
 			{
 				Name = "Message",
 				HeaderText = "Message",
-				AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells				
+				AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
 			}); ; // Auto-sized text column
 		}
 
@@ -160,92 +167,116 @@ namespace MantisLog
 
 		private void FrmInquiryLog_Load(object sender, EventArgs e)
 		{
-			createGridview();
-			activateControl(false);
-			txtCurrentPage.Text = currentPageIndex.ToString();
+			if (!CheckSelfAppIsRunning("MantisLog"))
+			{
+				createGridview();
+				activateControl(false);
+				txtCurrentPage.Text = currentPageIndex.ToString();
+			}
+			else
+			{
+				MessageBox.Show("Mantis Log is already in use, please close mantis log application", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+				this.Close();
+			}
+
+			
 		}
 
 		private void btnBrowse_Click(object sender, EventArgs e)
 		{
-			Log.Information("Start browse file.");
-
-			Cursor = Cursors.WaitCursor;
-			activateControl(false);
-			string selectedPath = string.Empty;
-
-			if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+			try
 			{
-				selectedPath = folderBrowserDialog.SelectedPath;
-			}
-			else
-			{
-				return;
-			}
-			Log.Information("End browse file.");
+				Log.Information("Start browse file.");
 
-			Log.Information("Start extract log to list.");
+				Cursor = Cursors.WaitCursor;
+				activateControl(false);
+				string selectedPath = string.Empty;
+				lblTotalPage.Text = "1";
 
-			string[] dirFiles = Directory.GetFiles(selectedPath, "*.LOG", SearchOption.AllDirectories);
-			if (dirFiles.Count() > 0)
-			{
-				foreach (string filePath in dirFiles)
+				if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
 				{
-					using (StreamReader reader = new StreamReader(filePath))
+					selectedPath = folderBrowserDialog.SelectedPath;
+				}
+				else
+				{
+					return;
+				}
+				Log.Information("End browse file.");
+
+				Log.Information("Start extract log to list.");
+
+				string[] dirFiles = Directory.GetFiles(selectedPath, "*.LOG", SearchOption.AllDirectories);
+				if (dirFiles.Count() > 0)
+				{
+					listLogFile = new List<LogFiles>();
+					foreach (string filePath in dirFiles)
 					{
-						string logName = Path.GetFileName(filePath);
-						string line;
-						while ((line = reader.ReadLine()) != null)
+						using (StreamReader reader = new StreamReader(filePath))
 						{
-							try
+							string logName = Path.GetFileName(filePath);
+							string line;
+							while ((line = reader.ReadLine()) != null)
 							{
-								string[] arrLine = line.Split('|');
-								if (arrLine.Length > 0)
+								try
 								{
-									LogFiles logFiles = new LogFiles();
-									logFiles.LogName = logName;
-									logFiles.Date = arrLine[0].Split(' ')[0];
-									logFiles.Time = arrLine[0].Split(' ')[1];
-									logFiles.GuidThreadId = string.Format("{0}-{1}", arrLine[1], arrLine[2]);
-									logFiles.AppName = arrLine[3];
-									logFiles.AppVersion = arrLine[4];
-									logFiles.Info = arrLine[5];
-									logFiles.Message = arrLine[6];
-									listLogFile.Add(logFiles);
+									string[] arrLine = line.Split('|');
+									if (arrLine.Length > 0)
+									{
+										LogFiles logFiles = new LogFiles();
+										logFiles.LogName = logName;
+										logFiles.Date = arrLine[0].Split(' ')[0];
+										logFiles.Time = arrLine[0].Split(' ')[1];
+										logFiles.GuidThreadId = string.Format("{0}-{1}", arrLine[1], arrLine[2]);
+										logFiles.AppName = arrLine[3];
+										logFiles.AppVersion = arrLine[4];
+										logFiles.Info = arrLine[5];
+										logFiles.Message = arrLine[6];
+										listLogFile.Add(logFiles);
+									}
 								}
-							}
-							catch (Exception ex)
-							{
-								if (ex.Message.Contains("Index was outside the bounds of the array."))
+								catch (Exception ex)
 								{
-									continue;
-								}
-								else
-								{
-									Log.Error(ex.Message);
+									if (ex.Message.Contains("Index was outside the bounds of the array."))
+									{
+										continue;
+									}
+									else
+									{
+										Log.Error(ex.Message);
+									}
 								}
 							}
 						}
 					}
 				}
+				else
+				{
+					MessageBox.Show("Log files not found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					Log.Warning("Log files not found.");
+					Cursor = Cursors.Arrow;
+					return;
+				}
+
+				updateDataGridView();
+				updateDateTimePicker();
+				updateComboBoxInfo();
+				activateControl(true);
+				btnPrev.Enabled = false;
+				btnNext.Enabled = false;
+				txtCurrentPage.Enabled = false;
+				Cursor = Cursors.Arrow;
+				Log.Information("Extract log to list succeeded.");
+				Log.Information("End extract log to list.");
 			}
-			else
+			catch (Exception ex)
 			{
-				MessageBox.Show("Log files not found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				Log.Warning("Log files not found.");
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Log.Warning(ex.Message);
 				Cursor = Cursors.Arrow;
 				return;
-			}			
-
-			updateDataGridView();
-			updateDateTimePicker();
-			updateComboBoxInfo();
-			activateControl(true);
-			btnPrev.Enabled = false;
-			btnNext.Enabled = false;
-			txtCurrentPage.Enabled = false;
-			Cursor = Cursors.Arrow;
-			Log.Information("Extract log to list succeeded.");
-			Log.Information("End extract log to list.");
+			}
+			
 		}
 
 		private void btnSearch_Click(object sender, EventArgs e)
@@ -259,14 +290,15 @@ namespace MantisLog
 			DateTime fromDate = dtStart.Value.Date;
 			DateTime toDate = dtEnd.Value.Date;
 
+			tempData = new List<LogFiles>();
 			tempData = listLogFile.Where(find => find.Info == infoCiteria && find.Message.Contains(msgCriteria) && castDateTime(find.Date) >= fromDate && castDateTime(find.Date) <= toDate).ToList();
 
 			if (tempData.Count > 0)
 			{
 				// Calculate the start index and end index of the current page
-				int startIndex = (currentPageIndex - 1) * pageSize;
-				int endIndex = Math.Min(startIndex + pageSize - 1, tempData.Count - 1);
-				int totalPage = (Int32)Math.Ceiling((double)tempData.Count / pageSize);
+				int startIndex = (currentPageIndex - 1) * getPageSize;
+				int endIndex = Math.Min(startIndex + getPageSize - 1, tempData.Count - 1);
+				int totalPage = (Int32)Math.Ceiling((double)tempData.Count / getPageSize);
 
 				if (currentPageIndex > totalPage)
 				{
@@ -277,6 +309,7 @@ namespace MantisLog
 					return;
 				}
 
+				pagedData = new List<LogFiles>();
 				// Create a sublist containing the data for the current page
 				pagedData = tempData.GetRange(startIndex, endIndex - startIndex + 1);
 
@@ -304,7 +337,7 @@ namespace MantisLog
 				// Update the navigation buttons' enabled/disabled status based on the current page index
 				btnPrev.Enabled = false;
 				btnNext.Enabled = false;
-				txtCurrentPage.Text = "1"; 
+				txtCurrentPage.Text = "1";
 
 				MessageBox.Show("Data not found", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				Log.Information("Data not found.");
@@ -375,12 +408,31 @@ namespace MantisLog
 
 			if (!string.IsNullOrEmpty(txtCurrentPage.Text))
 			{
-				if (Convert.ToInt16(txtCurrentPage.Text) <= 0)
+				if (Convert.ToInt32(txtCurrentPage.Text) <= 0)
 				{
 					txtCurrentPage.Text = "1";
 				}
 			}
 
+		}
+
+		public bool CheckSelfAppIsRunning(string appName)
+		{
+			bool result = false;
+			int count = 0;
+			Process[] processCollection = Process.GetProcesses();
+			foreach (Process p in processCollection)
+			{
+				if (p.ProcessName.ToLower() == appName.ToLower())
+				{
+					count++;
+				}
+			}
+			if (count > 1)
+			{
+				result = true;
+			}
+			return result;
 		}
 	}
 }

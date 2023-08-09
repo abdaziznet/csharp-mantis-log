@@ -1,0 +1,359 @@
+2023-08-09 11:14:25.507 +07:00 [INF] MainForm initialized.
+2023-08-09 11:20:00.146 +07:00 [INF] MainForm initialized.
+2023-08-09 11:20:51.276 +07:00 [INF] MainForm initialized.
+2023-08-09 11:20:54.211 +07:00 [INF] Start browse file.
+2023-08-09 11:20:59.066 +07:00 [INF] End browse file.
+2023-08-09 11:20:59.066 +07:00 [INF] Start extract log to list.
+2023-08-09 11:22:55.184 +07:00 [INF] MainForm initialized.
+2023-08-09 11:22:56.687 +07:00 [INF] Start browse file.
+2023-08-09 11:22:58.713 +07:00 [INF] End browse file.
+2023-08-09 11:22:58.713 +07:00 [INF] Start extract log to list.
+2023-08-09 11:23:10.080 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:23:10.080 +07:00 [INF] End extract log to list.
+2023-08-09 11:23:23.374 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:23.414 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:23.414 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:24.894 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:24.920 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:24.920 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:26.080 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:26.105 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:26.105 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:26.743 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:26.769 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:26.769 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:27.431 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:27.455 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:27.455 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:27.865 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:27.887 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:27.887 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:28.177 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:28.199 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:28.199 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:29.237 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:29.259 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:29.259 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:29.430 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:29.453 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:29.453 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:29.631 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:29.652 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:29.652 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:29.833 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:29.857 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:29.857 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:30.038 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:30.061 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:30.062 +07:00 [INF] End inquiry log.
+2023-08-09 11:23:30.251 +07:00 [INF] Start inquiry log.
+2023-08-09 11:23:30.275 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:23:30.275 +07:00 [INF] End inquiry log.
+2023-08-09 11:24:22.716 +07:00 [INF] MainForm initialized.
+2023-08-09 11:24:24.377 +07:00 [INF] Start browse file.
+2023-08-09 11:24:26.588 +07:00 [INF] End browse file.
+2023-08-09 11:24:26.589 +07:00 [INF] Start extract log to list.
+2023-08-09 11:24:26.722 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:24:26.722 +07:00 [INF] End extract log to list.
+2023-08-09 11:24:31.359 +07:00 [INF] Start inquiry log.
+2023-08-09 11:24:31.390 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:24:31.391 +07:00 [INF] End inquiry log.
+2023-08-09 11:24:41.851 +07:00 [INF] Start browse file.
+2023-08-09 11:24:45.287 +07:00 [INF] End browse file.
+2023-08-09 11:24:45.287 +07:00 [INF] Start extract log to list.
+2023-08-09 11:25:03.247 +07:00 [INF] MainForm initialized.
+2023-08-09 11:25:04.516 +07:00 [INF] Start browse file.
+2023-08-09 11:25:06.558 +07:00 [INF] End browse file.
+2023-08-09 11:25:06.558 +07:00 [INF] Start extract log to list.
+2023-08-09 11:25:06.689 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:25:06.689 +07:00 [INF] End extract log to list.
+2023-08-09 11:25:08.186 +07:00 [INF] Start inquiry log.
+2023-08-09 11:25:08.219 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:25:08.220 +07:00 [INF] End inquiry log.
+2023-08-09 11:25:09.093 +07:00 [INF] Start browse file.
+2023-08-09 11:25:10.987 +07:00 [INF] End browse file.
+2023-08-09 11:25:10.987 +07:00 [INF] Start extract log to list.
+2023-08-09 11:25:11.040 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:25:11.040 +07:00 [INF] End extract log to list.
+2023-08-09 11:25:14.457 +07:00 [INF] Start inquiry log.
+2023-08-09 11:25:14.492 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:25:14.492 +07:00 [INF] End inquiry log.
+2023-08-09 11:25:18.173 +07:00 [INF] Start browse file.
+2023-08-09 11:25:20.422 +07:00 [INF] End browse file.
+2023-08-09 11:25:20.422 +07:00 [INF] Start extract log to list.
+2023-08-09 11:25:20.489 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:25:20.489 +07:00 [INF] End extract log to list.
+2023-08-09 11:25:23.123 +07:00 [INF] Start inquiry log.
+2023-08-09 11:25:23.172 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:25:23.173 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:25.500 +07:00 [INF] Mantislog initialized.
+2023-08-09 11:32:26.891 +07:00 [INF] Start browse file.
+2023-08-09 11:32:29.032 +07:00 [INF] End browse file.
+2023-08-09 11:32:29.032 +07:00 [INF] Start extract log to list.
+2023-08-09 11:32:29.145 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:32:29.145 +07:00 [INF] End extract log to list.
+2023-08-09 11:32:31.515 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:31.549 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:31.549 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:32.905 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:32.930 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:32.930 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:33.122 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:33.150 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:33.150 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:33.323 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:33.346 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:33.346 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:33.527 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:33.551 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:33.551 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:33.734 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:33.755 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:33.756 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:33.926 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:33.947 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:33.947 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:34.127 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:34.150 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:34.150 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:34.314 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:34.335 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:34.335 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:34.502 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:34.527 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:34.527 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:34.696 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:34.722 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:34.722 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:35.424 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:35.450 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:35.450 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:35.612 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:35.634 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:35.634 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:35.806 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:35.828 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:35.828 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:35.992 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:36.014 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:36.014 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:36.184 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:36.206 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:36.206 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:36.370 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:36.393 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:36.393 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:36.575 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:36.597 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:36.598 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:36.788 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:36.811 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:36.811 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:36.986 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:37.009 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:37.009 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:37.183 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:37.207 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:37.207 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:41.170 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:41.186 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:41.186 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:42.537 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:42.554 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:42.554 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:42.728 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:42.740 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:42.740 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:42.914 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:42.927 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:42.927 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:43.114 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:43.129 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:43.129 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:43.299 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:43.315 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:43.315 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:43.478 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:43.494 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:43.494 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:44.209 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:44.224 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:44.224 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:44.394 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:44.409 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:44.409 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:44.562 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:44.575 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:44.575 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:44.745 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:44.758 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:44.758 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:44.932 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:44.947 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:44.947 +07:00 [INF] End inquiry log.
+2023-08-09 11:32:45.134 +07:00 [INF] Start inquiry log.
+2023-08-09 11:32:45.151 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:32:45.151 +07:00 [INF] End inquiry log.
+2023-08-09 11:33:00.529 +07:00 [INF] Start browse file.
+2023-08-09 11:33:07.478 +07:00 [INF] End browse file.
+2023-08-09 11:33:07.478 +07:00 [INF] Start extract log to list.
+2023-08-09 11:33:07.526 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:33:07.526 +07:00 [INF] End extract log to list.
+2023-08-09 11:33:12.162 +07:00 [INF] Start inquiry log.
+2023-08-09 11:33:12.187 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:33:12.187 +07:00 [INF] End inquiry log.
+2023-08-09 11:33:59.371 +07:00 [INF] Mantislog initialized.
+2023-08-09 11:34:01.235 +07:00 [INF] Start browse file.
+2023-08-09 11:34:03.268 +07:00 [INF] End browse file.
+2023-08-09 11:34:03.268 +07:00 [INF] Start extract log to list.
+2023-08-09 11:34:03.380 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:34:03.380 +07:00 [INF] End extract log to list.
+2023-08-09 11:34:07.767 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:07.801 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:07.801 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:11.087 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:11.111 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:11.111 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:11.575 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:11.602 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:11.602 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:11.793 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:11.814 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:11.814 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:11.994 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:12.016 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:12.016 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:12.184 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:12.206 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:12.206 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:12.368 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:12.389 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:12.390 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:12.582 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:12.605 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:12.605 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:12.774 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:12.795 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:12.795 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:13.684 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:13.708 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:13.708 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:13.876 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:13.897 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:13.897 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:14.070 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:14.092 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:14.092 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:14.252 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:14.274 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:14.274 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:14.456 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:14.479 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:14.479 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:14.654 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:14.677 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:14.677 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:15.226 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:15.249 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:15.249 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:15.802 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:15.826 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:15.826 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:17.291 +07:00 [INF] Start browse file.
+2023-08-09 11:34:19.782 +07:00 [INF] End browse file.
+2023-08-09 11:34:19.782 +07:00 [INF] Start extract log to list.
+2023-08-09 11:34:19.826 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:34:19.826 +07:00 [INF] End extract log to list.
+2023-08-09 11:34:22.384 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:22.415 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:22.416 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:27.766 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:27.783 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:27.783 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:30.728 +07:00 [INF] Start browse file.
+2023-08-09 11:34:33.108 +07:00 [INF] End browse file.
+2023-08-09 11:34:33.108 +07:00 [INF] Start extract log to list.
+2023-08-09 11:34:33.177 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 11:34:33.177 +07:00 [INF] End extract log to list.
+2023-08-09 11:34:35.608 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:35.634 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:35.634 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:36.912 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:36.937 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:36.937 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:37.120 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:37.148 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:37.148 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:37.301 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:37.324 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:37.324 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:37.470 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:37.494 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:37.494 +07:00 [INF] End inquiry log.
+2023-08-09 11:34:37.650 +07:00 [INF] Start inquiry log.
+2023-08-09 11:34:37.673 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 11:34:37.673 +07:00 [INF] End inquiry log.
+2023-08-09 11:35:35.437 +07:00 [INF] Mantislog initialized.
+2023-08-09 11:35:36.723 +07:00 [INF] Start browse file.
+2023-08-09 11:35:43.040 +07:00 [INF] End browse file.
+2023-08-09 11:35:43.040 +07:00 [INF] Start extract log to list.
+2023-08-09 11:35:50.766 +07:00 [WRN] Log files not found.
+2023-08-09 11:35:54.665 +07:00 [INF] Start browse file.
+2023-08-09 11:36:00.294 +07:00 [INF] End browse file.
+2023-08-09 11:36:00.294 +07:00 [INF] Start extract log to list.
+2023-08-09 11:37:29.903 +07:00 [INF] Mantislog initialized.
+2023-08-09 11:37:31.403 +07:00 [INF] Start browse file.
+2023-08-09 11:37:34.577 +07:00 [INF] End browse file.
+2023-08-09 11:37:34.577 +07:00 [INF] Start extract log to list.
+2023-08-09 11:37:43.670 +07:00 [WRN] Access to the path 'C:\Users\Abdul Aziz\AppData\Local\Application Data' is denied.
+2023-08-09 11:37:45.262 +07:00 [INF] Start browse file.
+2023-08-09 11:37:50.028 +07:00 [INF] End browse file.
+2023-08-09 11:37:50.028 +07:00 [INF] Start extract log to list.
+2023-08-09 11:37:52.197 +07:00 [WRN] Access to the path 'C:\Users\Abdul Aziz\Documents\My Music' is denied.
+2023-08-09 11:37:53.080 +07:00 [INF] Start browse file.
+2023-08-09 11:37:55.738 +07:00 [INF] End browse file.
+2023-08-09 11:37:55.738 +07:00 [INF] Start extract log to list.
+2023-08-09 11:37:56.921 +07:00 [WRN] Log files not found.
+2023-08-09 11:37:58.520 +07:00 [INF] Start browse file.
+2023-08-09 11:38:04.227 +07:00 [INF] End browse file.
+2023-08-09 11:38:04.227 +07:00 [INF] Start extract log to list.
+2023-08-09 11:38:05.049 +07:00 [WRN] Log files not found.
+2023-08-09 11:39:31.529 +07:00 [INF] Mantislog initialized.
+2023-08-09 12:01:36.759 +07:00 [INF] Mantislog initialized.
+2023-08-09 12:01:38.502 +07:00 [INF] Start browse file.
+2023-08-09 12:02:01.885 +07:00 [INF] End browse file.
+2023-08-09 12:02:01.885 +07:00 [INF] Start extract log to list.
+2023-08-09 12:05:01.510 +07:00 [WRN] The process cannot access the file 'C:\ProgramData\Ivatama Teknologi\Fingerprint\LOGS\NServer.log' because it is being used by another process.
+2023-08-09 12:06:37.991 +07:00 [INF] Mantislog initialized.
+2023-08-09 12:06:39.627 +07:00 [INF] Start browse file.
+2023-08-09 12:06:41.997 +07:00 [INF] End browse file.
+2023-08-09 12:06:41.997 +07:00 [INF] Start extract log to list.
+2023-08-09 12:06:42.123 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 12:06:42.123 +07:00 [INF] End extract log to list.
+2023-08-09 12:06:43.635 +07:00 [INF] Start inquiry log.
+2023-08-09 12:06:43.669 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 12:06:43.669 +07:00 [INF] End inquiry log.
+2023-08-09 12:08:40.230 +07:00 [INF] Mantislog initialized.
+2023-08-09 12:08:42.290 +07:00 [INF] Start browse file.
+2023-08-09 12:08:44.661 +07:00 [INF] End browse file.
+2023-08-09 12:08:44.661 +07:00 [INF] Start extract log to list.
+2023-08-09 12:08:44.779 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 12:08:44.779 +07:00 [INF] End extract log to list.
+2023-08-09 12:08:45.521 +07:00 [INF] Start inquiry log.
+2023-08-09 12:08:45.562 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 12:08:45.562 +07:00 [INF] End inquiry log.
+2023-08-09 12:09:16.477 +07:00 [INF] Mantislog initialized.
+2023-08-09 12:09:17.829 +07:00 [INF] Start browse file.
+2023-08-09 12:09:19.671 +07:00 [INF] End browse file.
+2023-08-09 12:09:19.672 +07:00 [INF] Start extract log to list.
+2023-08-09 12:09:19.810 +07:00 [INF] Extract log to list succeeded.
+2023-08-09 12:09:19.810 +07:00 [INF] End extract log to list.
+2023-08-09 12:09:21.050 +07:00 [INF] Start inquiry log.
+2023-08-09 12:09:21.084 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 12:09:21.084 +07:00 [INF] End inquiry log.
+2023-08-09 12:09:28.056 +07:00 [INF] Start inquiry log.
+2023-08-09 12:09:29.981 +07:00 [WRN] Current page cannot be greater than Total page.
+2023-08-09 12:09:32.285 +07:00 [INF] Start inquiry log.
+2023-08-09 12:09:32.311 +07:00 [INF] Inquiry log succeeded.
+2023-08-09 12:09:32.311 +07:00 [INF] End inquiry log.
+2023-08-09 12:15:58.200 +07:00 [INF] Mantislog initialized.
