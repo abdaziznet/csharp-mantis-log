@@ -194,14 +194,34 @@ namespace MantisLog
 				string selectedPath = string.Empty;
 				lblTotalPage.Text = "1";
 
-				if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+				using (var folderBrowserDialogs = new FolderBrowserDialog())
 				{
-					selectedPath = folderBrowserDialog.SelectedPath;
+					// Set the initial directory for the folder browser dialog
+					if (!Directory.Exists(@"C:\ProgramData\Ivatama Teknologi\Fingerprint\LOGS"))
+					{
+						MessageBox.Show("Directory path : 'C:\\ProgramData\\Ivatama Teknologi\\Fingerprint\\LOGS' not exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						Cursor = Cursors.Arrow;
+						return;
+					}
+
+					folderBrowserDialogs.SelectedPath = @"C:\ProgramData\Ivatama Teknologi\Fingerprint\LOGS";
+
+					// Show the dialog
+					DialogResult result = folderBrowserDialogs.ShowDialog();
+
+					if (result == DialogResult.OK)
+					{
+						// User selected a folder
+						selectedPath = folderBrowserDialogs.SelectedPath;
+					}
+					else
+					{
+						Cursor = Cursors.Arrow;
+						return;
+					}
 				}
-				else
-				{
-					return;
-				}
+
+
 				Log.Information("End browse file.");
 
 				Log.Information("Start extract log to list.");
@@ -283,6 +303,11 @@ namespace MantisLog
 		{
 			Log.Information("Start inquiry log.");
 
+			if (!validateSearch())
+			{
+				return;
+			}			
+
 			Cursor = Cursors.WaitCursor;
 
 			string infoCiteria = cmboxInfo.Text;
@@ -299,6 +324,7 @@ namespace MantisLog
 				int startIndex = (currentPageIndex - 1) * getPageSize;
 				int endIndex = Math.Min(startIndex + getPageSize - 1, tempData.Count - 1);
 				int totalPage = (Int32)Math.Ceiling((double)tempData.Count / getPageSize);
+				lblTotalPage.Text = totalPage.ToString();
 
 				if (currentPageIndex > totalPage)
 				{
@@ -326,7 +352,6 @@ namespace MantisLog
 				btnNext.Enabled = endIndex < tempData.Count - 1; //currentPageIndex < (tempData.Count - 1) / pageSize;//endIndex < tempData.Count - 1;
 				txtCurrentPage.Enabled = true;
 				txtCurrentPage.Text = currentPageIndex.ToString();
-				lblTotalPage.Text = totalPage.ToString();
 
 			}
 			else
@@ -386,8 +411,9 @@ namespace MantisLog
 			{
 				if (string.IsNullOrEmpty(txtCurrentPage.Text) || Convert.ToInt16(txtCurrentPage.Text) <= 0)
 				{
-					txtCurrentPage.Text = "1";
+					txtCurrentPage.Text = "1";				
 				}
+
 				currentPageIndex = Convert.ToInt32(txtCurrentPage.Text);
 				// Call your function here
 				btnSearch_Click(sender, e);
@@ -396,6 +422,20 @@ namespace MantisLog
 				e.Handled = true;
 				e.SuppressKeyPress = true;
 			}
+			else if (e.KeyCode == Keys.Back)
+			{
+				if (string.IsNullOrEmpty(txtCurrentPage.Text) || Convert.ToInt16(txtCurrentPage.Text) <= 0 || txtCurrentPage.Text == "1")
+				{
+					txtCurrentPage.Text = "1";
+					currentPageIndex = Convert.ToInt32(txtCurrentPage.Text);
+				}
+				else if (txtCurrentPage.Text.Length > 0)
+				{
+					currentPageIndex = Convert.ToInt32(txtCurrentPage.Text.Substring(0, txtCurrentPage.Text.Length - 1));
+				}
+				
+			}
+
 		}
 
 		private void txtCurrentPage_KeyPress(object sender, KeyPressEventArgs e)
@@ -411,7 +451,14 @@ namespace MantisLog
 				if (Convert.ToInt32(txtCurrentPage.Text) <= 0)
 				{
 					txtCurrentPage.Text = "1";
+					currentPageIndex = Convert.ToInt32(txtCurrentPage.Text);
 				}
+
+			}
+			else if (string.IsNullOrEmpty(txtCurrentPage.Text) || Convert.ToInt16(txtCurrentPage.Text) <= 0 || txtCurrentPage.Text == "1")
+			{
+				txtCurrentPage.Text = "1";
+				currentPageIndex = Convert.ToInt32(txtCurrentPage.Text);
 			}
 
 		}
@@ -429,6 +476,27 @@ namespace MantisLog
 				}
 			}
 			if (count > 1)
+			{
+				result = true;
+			}
+			return result;
+		}
+
+		private bool validateSearch()
+		{
+			bool result = false;
+
+			if (dtEnd.Value < dtStart.Value)
+			{
+				MessageBox.Show("End date cannot be smaller than start date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				result = false;
+			}
+			//else if (dtStart.Value > dtEnd.Value)
+			//{
+			//	MessageBox.Show("Start date cannot be greater than end date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			//	result = false;
+			//}
+			else
 			{
 				result = true;
 			}
